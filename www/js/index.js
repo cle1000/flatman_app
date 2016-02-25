@@ -23,7 +23,7 @@ var app = {
     },
 
     loadWebpage: function(dest){
-        window.location.href = dest;
+        document.location = dest;
     },
     // Bind Event Listeners
     //
@@ -37,7 +37,9 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        //app.receivedEvent('deviceready');
+        alert("init");
+        cordova.InAppBrowser.open("http://www.flatman.at", "_self", "location=no")
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
