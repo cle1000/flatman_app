@@ -28,7 +28,7 @@
     <gap:plugin name="org.apache.cordova.device-motion" />
     <gap:plugin name="org.apache.cordova.device-orientation" />
     <gap:plugin name="org.apache.cordova.dialogs" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
@@ -57,6 +57,7 @@
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
     <allow-navigation href="http://www.flatman.at/*" />
+    <allow-navigation href="*" />
     <access launch-external="yes" origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
