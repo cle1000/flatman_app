@@ -60,6 +60,8 @@
 
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-navigation href="http://www.flatman.at/*" />
+    <allow-navigation href="*" />
+
     <access origin="*" launch-external="yes"/>
 
     <allow-intent href="http://*/*" />
