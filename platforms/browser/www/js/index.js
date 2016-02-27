@@ -38,8 +38,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         //app.receivedEvent('deviceready');
-        alert("init");
-        cordova.InAppBrowser.open("http://www.flatman.at", "_blank", "location=no");
+        cordova.InAppBrowser.open("http://www.flatman.at", "_system", "location=no");
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
