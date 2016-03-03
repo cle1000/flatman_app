@@ -46,9 +46,9 @@ var app = {
 
     onDeviceReady: function() {
         PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
-        /*/alert("asdf1")
+        alert("asdf1")
 
-        // First time registration
+        /*/ First time registration
         // This will be called on token registration/refresh with Android and with every runtime with iOS
         Pushbots.on("registered", function(token){
             alert("Registration Id:" + token);
@@ -57,11 +57,11 @@ var app = {
         Pushbots.getRegistrationId(function(token){
             alert("Registration Id:" + token);
         });
-    */
-        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no, EnableViewPortScale=no");
+    
+        /*browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no, EnableViewPortScale=no");
         browser.addEventListener('loadstop', function (){
             browser.executeScript({ code: "alert( 'hello' );" });
-        });
+        });*/
     },
 
     // Update DOM on a Received Event
