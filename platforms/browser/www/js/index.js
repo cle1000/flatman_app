@@ -16,14 +16,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var browser = null
+
+
 var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
     },
 
-    loadWebpage: function(dest){
-        document.location = dest;
+    show: function(text){
+        alert("text: " + text);
     },
     // Bind Event Listeners
     //
@@ -36,10 +39,31 @@ var app = {
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        //app.receivedEvent('deviceready');
-        cordova.InAppBrowser.open("http://www.flatman.at", "_blank", "location=no");
+
+    addLocalStorage: function() {
+        //browser.executeScript({code: "alert('app');"});
     },
+
+    onDeviceReady: function() {
+        PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
+        /*/alert("asdf1")
+
+        // First time registration
+        // This will be called on token registration/refresh with Android and with every runtime with iOS
+        Pushbots.on("registered", function(token){
+            alert("Registration Id:" + token);
+        });
+
+        Pushbots.getRegistrationId(function(token){
+            alert("Registration Id:" + token);
+        });
+    */
+        /*browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no, EnableViewPortScale=no");
+        browser.addEventListener('loadstop', function (){
+            browser.executeScript({ code: "alert( 'hello' );" });
+        });*/
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);

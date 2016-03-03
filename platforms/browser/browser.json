@@ -12,6 +12,9 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "at.flatman.app"
+        },
+        "pushbots-cordova-plugin": {
+            "PACKAGE_NAME": "at.flatman.app"
         }
     },
     "dependent_plugins": {},
@@ -32,10 +35,19 @@
             "merges": [
                 ""
             ]
+        },
+        {
+            "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
+            "id": "pushbots-cordova-plugin.PushbotsPlugin",
+            "pluginId": "pushbots-cordova-plugin",
+            "clobbers": [
+                "PushbotsPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.2.1",
-        "cordova-plugin-inappbrowser": "1.3.0"
+        "cordova-plugin-inappbrowser": "1.3.0",
+        "pushbots-cordova-plugin": "1.3.5"
     }
 }

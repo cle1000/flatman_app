@@ -12,6 +12,9 @@
         },
         "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "at.flatman.app"
+        },
+        "pushbots-cordova-plugin": {
+            "PACKAGE_NAME": "at.flatman.app"
         }
     },
     "dependent_plugins": {}
