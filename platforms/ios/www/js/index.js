@@ -25,9 +25,6 @@ var app = {
         this.bindEvents();
     },
 
-    show: function(text){
-        alert("text: " + text);
-    },
     // Bind Event Listeners
     //
     // Bind any events that are required on startup. Common events are:
@@ -40,30 +37,33 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
 
-    addLocalStorage: function() {
-        //browser.executeScript({code: "alert('app');"});
-    },
-
     onDeviceReady: function() {
-        PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
-        alert("asdf1")
-
-        /*/ First time registration
-        // This will be called on token registration/refresh with Android and with every runtime with iOS
-        Pushbots.on("registered", function(token){
-            alert("Registration Id:" + token);
-        });
-
-        Pushbots.getRegistrationId(function(token){
-            alert("Registration Id:" + token);
-        });
-    
-        /*browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no, EnableViewPortScale=no");
+        app.initPushbots()
+        browser = app.getBrowser()
         browser.addEventListener('loadstop', function (){
-            browser.executeScript({ code: "alert( 'hello' );" });
-        });*/
+            browser.executeScript({ code: "document.cookie='device_token="+app.getDeviceToken()+"'"});
+        });
     },
 
+    initPushbots: function (){
+        var device_token = localStorage.getItem('device_token')
+        if (true || device_token === undefined || device_token == 'null'){
+            var Pushbots = PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
+            Pushbots.getRegistrationId(function (token){ localStorage.setItem('device_token', token); alert("reg:" + token); });
+        }
+    },
+
+    getDeviceToken: function (){
+        return localStorage.getItem('device_token');
+    },
+
+    getBrowser: function (){
+        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "zoom=no, location=no");
+        browser.addEventListener('exit', function (){
+            navigator.app.exitApp()
+        });
+        return browser
+    },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);

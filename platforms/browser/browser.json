@@ -10,15 +10,23 @@
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-inappbrowser": {
+        "pushbots-cordova-plugin": {
             "PACKAGE_NAME": "at.flatman.app"
         },
-        "pushbots-cordova-plugin": {
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "at.flatman.app"
         }
     },
     "dependent_plugins": {},
     "modules": [
+        {
+            "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
+            "id": "pushbots-cordova-plugin.PushbotsPlugin",
+            "pluginId": "pushbots-cordova-plugin",
+            "clobbers": [
+                "PushbotsPlugin"
+            ]
+        },
         {
             "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
             "id": "cordova-plugin-inappbrowser.inappbrowser",
@@ -35,19 +43,11 @@
             "merges": [
                 ""
             ]
-        },
-        {
-            "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
-            "id": "pushbots-cordova-plugin.PushbotsPlugin",
-            "pluginId": "pushbots-cordova-plugin",
-            "clobbers": [
-                "PushbotsPlugin"
-            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.2.1",
-        "cordova-plugin-inappbrowser": "1.3.0",
-        "pushbots-cordova-plugin": "1.3.5"
+        "pushbots-cordova-plugin": "1.3.5",
+        "cordova-plugin-inappbrowser": "1.2.1"
     }
 }

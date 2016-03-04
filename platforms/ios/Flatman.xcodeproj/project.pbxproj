@@ -15,12 +15,12 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
-		EC6CD2D673074195847934C4 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE0D8837CBD40069B8F1628 /* CDVInAppBrowser.m */; };
 		3FC4886B7E874F6598A8A60D /* PushbotsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F96A6BB2AB4FEDA528B9CB /* PushbotsPlugin.m */; };
 		C7A3D505073C4E84BCC2D56E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D60AF449F071481CB3060885 /* CoreLocation.framework */; };
 		C2ED2C4804C8486C957E8FA1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FC2626C94F443B097B6B169 /* SystemConfiguration.framework */; };
 		E8E67A8D53A141598A6E0FF5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19DA9B1579D4AA6AEB74CDC /* CoreTelephony.framework */; };
 		0864952BB77345C7A24C3E08 /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBF0E14A15740189A855B7A /* Pushbots.framework */; };
+		2ECFDC5FD284429B8DFB9E55 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 502ED19BA3FF41228F2FB5C3 /* CDVInAppBrowser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,14 +60,14 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Flatman/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		0DE0D8837CBD40069B8F1628 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		90A817F175D94D2E882E97CD /* CDVInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		E7F96A6BB2AB4FEDA528B9CB /* PushbotsPlugin.m */ = {isa = PBXFileReference; name = "PushbotsPlugin.m"; path = "pushbots-cordova-plugin/PushbotsPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		ABA5B01D827B4F3684443F55 /* PushbotsPlugin.h */ = {isa = PBXFileReference; name = "PushbotsPlugin.h"; path = "pushbots-cordova-plugin/PushbotsPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		D60AF449F071481CB3060885 /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		5FC2626C94F443B097B6B169 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		A19DA9B1579D4AA6AEB74CDC /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		2BBF0E14A15740189A855B7A /* Pushbots.framework */ = {isa = PBXFileReference; name = "Pushbots.framework"; path = "Flatman/Plugins/pushbots-cordova-plugin/Pushbots.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		502ED19BA3FF41228F2FB5C3 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		61C67D0E3FAD42D1B705FE84 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +178,10 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				0DE0D8837CBD40069B8F1628 /* CDVInAppBrowser.m */,
-				90A817F175D94D2E882E97CD /* CDVInAppBrowser.h */,
 				E7F96A6BB2AB4FEDA528B9CB /* PushbotsPlugin.m */,
 				ABA5B01D827B4F3684443F55 /* PushbotsPlugin.h */,
+				502ED19BA3FF41228F2FB5C3 /* CDVInAppBrowser.m */,
+				61C67D0E3FAD42D1B705FE84 /* CDVInAppBrowser.h */,
 			);
 			name = Plugins;
 			path = "Flatman/Plugins";
@@ -296,8 +296,8 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
-				EC6CD2D673074195847934C4 /* CDVInAppBrowser.m in Sources */,
 				3FC4886B7E874F6598A8A60D /* PushbotsPlugin.m in Sources */,
+				2ECFDC5FD284429B8DFB9E55 /* CDVInAppBrowser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
