@@ -1,1 +1,0 @@
-{"name":"at.flatman.app","version":"1.0.0","title":"Flatman","hooks":{"cordova":{"desktop":"cordova.desktop","apparmor":"apparmor.json"}},"framework":"ubuntu-sdk-13.10","maintainer":"Flatman Team <info@flatman.at>","architecture":"amd64","description":"A tool to organize the finances of a shared flat!"}
