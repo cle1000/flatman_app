@@ -46,16 +46,17 @@ var app = {
     },
 
     initPushbots: function (){
-        var device_token = localStorage.getItem('device_token')
-        alert("saved token:" + device_token);
-        if (device_token === undefined || device_token === 'null' || device_token === ""){
+        if (localStorage.getItem('device_token') == null){
+            alert("init pushbots")
             var Pushbots = PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
-            Pushbots.getRegistrationId(function (token){
-                if (token != '' && token != null && token != undefined){
-                    localStorage.setItem('device_token', token);
-                    alert("reg:" + token);
-                }
-            });
+            setTimeout(function(){
+                Pushbots.getRegistrationId(function (token){
+                localStorage.setItem('device_token', token);
+                alert("reg:" + token);
+                });
+            }, 5000);
+        }else {
+            alert("device_token: " + localStorage.getItem('device_token'));
         }
     },
 
