@@ -46,7 +46,7 @@ var app = {
     },
 
     initPushbots: function (){
-        if (localStorage.getItem('device_token') == null){
+        if (localStorage.getItem('device_token') == null || localStorage.getItem('device_token').length < 10){
             //alert("init pushbots")
             var Pushbots = PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
             setTimeout(function(){
@@ -65,7 +65,7 @@ var app = {
     },
 
     getBrowser: function (){
-        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no");
+        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no,zoom=no,toolbar=no", );
         browser.addEventListener('exit', function (){
             navigator.app.exitApp()
         });

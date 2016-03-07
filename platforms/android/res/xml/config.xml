@@ -1,16 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="at.flatman.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="at.flatman.app" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
-    </feature>
-    <feature name="PushbotsPlugin">
-        <param name="android-package" value="com.pushbots.plugin.PushbotsPlugin" />
-    </feature>
     <allow-intent href="market:*" />
     <name>Flatman</name>
     <description>
@@ -19,6 +9,12 @@
     <author email="info@flatman.at" href="http://www.flatman.at">
         Flatman Team
     </author>
+    <gap:config-file parent="CFBundleVersion" platform="ios">
+        <string>1.0.5</string>
+    </gap:config-file>
+    <gap:config-file parent="CFBundleShortVersionString" platform="ios">
+        <string>1.0.5</string>
+    </gap:config-file>
     <content src="index.html" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
@@ -68,9 +64,6 @@
     <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
-    <gap:config-file parent="CFBundleVersion" platform="iOS">
-        <string>1</string>
-    </gap:config-file>
     <access origin="*" />
     <allow-navigation href="http://www.flatman.at/*" />
     <allow-navigation href="*" />
@@ -86,4 +79,8 @@
         <gap:platform name="android" />
         <gap:platform name="winphone" />
     </gap:platforms>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>
