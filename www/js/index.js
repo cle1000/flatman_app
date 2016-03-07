@@ -65,7 +65,7 @@ var app = {
     },
 
     getBrowser: function (){
-        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no,zoom=no,toolbar=no", );
+        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no,zoom=no,toolbar=no");
         browser.addEventListener('exit', function (){
             navigator.app.exitApp()
         });
