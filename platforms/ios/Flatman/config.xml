@@ -36,6 +36,9 @@
     </feature>
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
+    <icon gap:platform="ios" height="76" src="www/res/icon/ios/icon-76.png" width="76" />
+    <icon gap:platform="ios" height="120" src="www/res/icon/ios/icon-120.png" width="120" />
+    <icon gap:platform="ios" height="152" src="www/res/icon/ios/icon-152.png" width="152" />
     <name>Flatman</name>
     <description>
         A tool to organize the finances of a shared flat!
@@ -92,6 +95,9 @@
     <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
+    <gap:config-file parent="CFBundleVersion" platform="iOS">
+        <string>1</string>
+    </gap:config-file>
     <access origin="*" />
     <allow-navigation href="http://www.flatman.at/*" />
     <allow-navigation href="*" />
@@ -102,4 +108,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <gap:platforms>
+        <gap:platform name="ios" />
+        <gap:platform name="android" />
+        <gap:platform name="winphone" />
+    </gap:platforms>
 </widget>

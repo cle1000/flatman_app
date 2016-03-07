@@ -57,9 +57,13 @@
     <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
-    <icon src="www/res/icon/ios/icon-76.png" gap:platform="ios" width="76" height="76"/> 
-    <icon src="www/res/icon/ios/icon-120.png" gap:platform="ios" width="120" height="120"/> 
-    <icon src="www/res/icon/ios/icon-152.png" gap:platform="ios" width="152" height="152"/> 
+   
+
+    <gap:config-file platform="iOS" parent="CFBundleVersion">
+        <string>1</string>
+    </gap:config-file>
+    
+
     <access origin="*" />
 
     <plugin name="cordova-plugin-whitelist" version="1" />
@@ -80,5 +84,15 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <icon src="www/res/icon/ios/icon-76.png" gap:platform="ios" width="76" height="76"/> 
+        <icon src="www/res/icon/ios/icon-120.png" gap:platform="ios" width="120" height="120"/> 
+        <icon src="www/res/icon/ios/icon-152.png" gap:platform="ios" width="152" height="152"/> 
     </platform>
+
+    <gap:platforms>
+        <gap:platform name="ios" />
+        <gap:platform name="android" />
+        <gap:platform name="winphone" />
+    </gap:platforms>
+
 </widget>

@@ -56,6 +56,9 @@
     <gap:splash gap:platform="ios" height="1024" src="www/res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
+    <gap:config-file parent="CFBundleVersion" platform="iOS">
+        <string>1</string>
+    </gap:config-file>
     <access origin="*" />
     <allow-navigation href="http://www.flatman.at/*" />
     <allow-navigation href="*" />
@@ -66,4 +69,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <gap:platforms>
+        <gap:platform name="ios" />
+        <gap:platform name="android" />
+        <gap:platform name="winphone" />
+    </gap:platforms>
 </widget>

@@ -46,10 +46,17 @@ var app = {
     },
 
     initPushbots: function (){
-        var device_token = localStorage.getItem('device_token')
-        if (true || device_token === undefined || device_token == 'null'){
+        if (localStorage.getItem('device_token') == null){
+            //alert("init pushbots")
             var Pushbots = PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
-            Pushbots.getRegistrationId(function (token){ localStorage.setItem('device_token', token); alert("reg:" + token); });
+            setTimeout(function(){
+                Pushbots.getRegistrationId(function (token){
+                localStorage.setItem('device_token', token);
+                //alert("reg:" + token);
+                });
+            }, 5000);
+        }else {
+            //alert("device_token: " + localStorage.getItem('device_token'));
         }
     },
 
@@ -58,7 +65,7 @@ var app = {
     },
 
     getBrowser: function (){
-        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "zoom=no, location=no");
+        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no");
         browser.addEventListener('exit', function (){
             navigator.app.exitApp()
         });
