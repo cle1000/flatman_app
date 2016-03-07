@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="at.flatman.app" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="at.flatman.app" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Flatman</name>
     <description>
         A tool to organize the finances of a shared flat!
@@ -7,6 +7,12 @@
     <author email="info@flatman.at" href="http://www.flatman.at">
         Flatman Team
     </author>
+    
+    <gap:config-file platform="ios" parent="CFBundleVersion">
+        <string>1.0.2</string>
+    </gap:config-file>
+
+
     <content src="index.html" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
