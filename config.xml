@@ -41,7 +41,7 @@
     <gap:plugin name="pushbots-cordova-plugin" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <icon src="icon.png" />
-    <icon src="white_notification_icon.png" />
+    <icon src="www/white_notification_icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
@@ -68,6 +68,23 @@
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
 
     <access origin="*" />
+
+    <platform name="android">
+         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+          <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:host="flatman.at">
+                </data>
+                <data android:host="www.flatman.at">
+                </data>
+                <data android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:pathPattern="/.*" />
+            </intent-filter>
+        </config-file>
+    </platform>
 
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-navigation href="http://www.flatman.at/*" />
