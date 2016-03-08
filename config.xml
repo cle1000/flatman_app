@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android_packageName="at.flatman.app" ios_CFBundleIdentifier="at.flatman.app" version="1.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android_packageName="at.flatman.app" ios_CFBundleIdentifier="at.flatman.app" version="1.0.7" 
+    xmlns="http://www.w3.org/ns/widgets"  
+    xmlns:cdv="http://cordova.apache.org/ns/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:gap="http://phonegap.com/ns/1.0">
+
     <name>Flatman</name>
     <description>
         A tool to organize the finances of a shared flat!
@@ -72,16 +77,16 @@
     <platform name="android">
          <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
           <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
                 <data android:host="flatman.at">
                 </data>
                 <data android:host="www.flatman.at">
                 </data>
-                <data android:scheme="https" />
-                <data android:scheme="http" />
-                <data android:pathPattern="/.*" />
+                <data android:scheme="https"/>
+                <data android:scheme="http"/>
+                <data android:pathPattern="/.*"/>
             </intent-filter>
         </config-file>
     </platform>
