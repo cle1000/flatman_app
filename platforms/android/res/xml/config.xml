@@ -14,6 +14,20 @@
     <feature name="PushbotsPlugin">
         <param name="android-package" value="com.pushbots.plugin.PushbotsPlugin" />
     </feature>
+    <config-file parent="/manifest/application/activity" target="AndroidManifest.xml">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:host="flatman.at">
+            </data>
+            <data android:host="www.flatman.at">
+            </data>
+            <data android:scheme="https" />
+            <data android:scheme="http" />
+            <data android:pathPattern="/.*" />
+        </intent-filter>
+    </config-file>
     <allow-intent href="market:*" />
     <name>Flatman</name>
     <description>
@@ -53,6 +67,7 @@
     <gap:plugin name="pushbots-cordova-plugin" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <icon src="icon.png" />
+    <icon src="www/white_notification_icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
