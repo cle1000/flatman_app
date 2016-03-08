@@ -79,22 +79,20 @@
 
     <access origin="*" />
 
-    <platform name="android">
-         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
-          <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.BROWSABLE"/>
-                <data android:host="flatman.at">
-                </data>
-                <data android:host="www.flatman.at">
-                </data>
-                <data android:scheme="https"/>
-                <data android:scheme="http"/>
-                <data android:pathPattern="/.*"/>
-            </intent-filter>
-        </config-file>
-    </platform>
+    <gap:config-file platform="android" mode="add" parent="/manifest/application/activity">
+      <intent-filter>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:host="flatman.at">
+            </data>
+            <data android:host="www.flatman.at">
+            </data>
+            <data android:scheme="https"/>
+            <data android:scheme="http"/>
+            <data android:pathPattern="/.*"/>
+        </intent-filter>
+    </gap:config-file>
 
     <plugin name="cordova-plugin-whitelist" version="1" />
     <allow-navigation href="http://www.flatman.at/*" />

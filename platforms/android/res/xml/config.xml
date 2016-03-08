@@ -5,20 +5,6 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <config-file parent="/manifest/application/activity" target="AndroidManifest.xml">
-        <intent-filter>
-            <action android:name="android.intent.action.VIEW" />
-            <category android:name="android.intent.category.DEFAULT" />
-            <category android:name="android.intent.category.BROWSABLE" />
-            <data android:host="flatman.at">
-            </data>
-            <data android:host="www.flatman.at">
-            </data>
-            <data android:scheme="https" />
-            <data android:scheme="http" />
-            <data android:pathPattern="/.*" />
-        </intent-filter>
-    </config-file>
     <allow-intent href="market:*" />
     <name>Flatman</name>
     <description>
@@ -87,6 +73,20 @@
     <gap:splash gap:platform="ios" height="768" src="www/res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
+    <gap:config-file mode="add" parent="/manifest/application/activity" platform="android">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:host="flatman.at">
+            </data>
+            <data android:host="www.flatman.at">
+            </data>
+            <data android:scheme="https" />
+            <data android:scheme="http" />
+            <data android:pathPattern="/.*" />
+        </intent-filter>
+    </gap:config-file>
     <allow-navigation href="http://www.flatman.at/*" />
     <allow-navigation href="*" />
     <access launch-external="yes" origin="*" />
