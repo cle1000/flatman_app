@@ -5,6 +5,9 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <config-file parent="application/activity" target="AndroidManifest.xml">
+        <intent-filter>bla</intent-filter>
+    </config-file>
     <allow-intent href="market:*" />
     <name>Flatman</name>
     <description>
