@@ -39,6 +39,10 @@
     <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="pushbots-cordova-plugin" source="npm" />
+    <gap:plugin name="nl.x-services.plugins.launchmyapp">
+        <param name="http://*.flatman.at/*" value="mycoolapp" />
+    </gap:plugin>
+
     <!--gap:plugin name="org.apache.cordova.network-information" /-->
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <icon src="icon.png" />

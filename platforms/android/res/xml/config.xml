@@ -1,6 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="at.flatman.app" version="1.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="at.flatman.app" version="1.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <allow-intent href="market:*" />
     <name>Flatman</name>
     <description>
@@ -10,10 +14,10 @@
         Flatman Team
     </author>
     <gap:config-file parent="CFBundleVersion" platform="ios">
-        <string>1.0.6</string>
+        <string>1.0.7</string>
     </gap:config-file>
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
-        <string>1.0.6</string>
+        <string>1.0.7</string>
     </gap:config-file>
     <content src="index.html" />
     <preference name="permissions" value="none" />
@@ -38,6 +42,9 @@
     <gap:plugin name="org.apache.cordova.dialogs" />
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="pushbots-cordova-plugin" source="npm" />
+    <gap:plugin name="nl.x-services.plugins.launchmyapp">
+        <param name="http://*.flatman.at/*" value="mycoolapp" />
+    </gap:plugin>
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
@@ -79,8 +86,4 @@
         <gap:platform name="android" />
         <gap:platform name="winphone" />
     </gap:platforms>
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
-    </feature>
 </widget>

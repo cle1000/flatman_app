@@ -38,16 +38,27 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
 
     onDeviceReady: function() {
+        window.plugins.webintent.getUri(function(url) {
+        if(url !== "") {
+            // url is the url the intent was launched with
+            alert('url');
+        }
+        });
         app.initPushbots()
         browser = app.getBrowser()
         browser.addEventListener('loadstop', function (){
-            browser.executeScript({ code: "document.cookie='device_token="+app.getDeviceToken()+"'"});
+            browser.executeScript({ code: "document.cookie='device_token="+app.getDeviceToken()+"'; document.cookie='platform="+localStorage.getItem('platform')+"'"});
         });
     },
 
     initPushbots: function (){
         if (localStorage.getItem('device_token') == null || localStorage.getItem('device_token').length < 10){
             //alert("init pushbots")
+            if (PushbotsPlugin.isAndroid()){
+                localStorage.setItem('platform', 'android');
+            }else{
+                localStorage.setItem('platform', 'ios');
+            }
             var Pushbots = PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
             setTimeout(function(){
                 Pushbots.getRegistrationId(function (token){
