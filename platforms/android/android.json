@@ -19,7 +19,7 @@
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "io.cordova.helloCordova"
+            "PACKAGE_NAME": "at.flatman.android"
         }
     },
     "dependent_plugins": {},
