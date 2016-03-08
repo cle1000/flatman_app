@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android_packageName="at.flatman.app" id="io.cordova.helloCordova" ios_CFBundleIdentifier="at.flatman.app" version="1.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android_packageName="at.flatman.app" id="io.cordova.helloCordova" ios_CFBundleIdentifier="at.flatman.app" version="1.0.7" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="AllowInlineMediaPlayback" value="false" />
     <preference name="BackupWebStorage" value="cloud" />
     <preference name="DisallowOverscroll" value="false" />
@@ -80,11 +80,14 @@
     <gap:plugin name="pushbots-cordova-plugin" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <icon src="icon.png" />
-    <icon src="www/white_notification_icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
     <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/white_notification_icon/android/white_notification_icon-36-ldpi.png" />
+    <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/white_notification_icon/android/white_notification_icon-48-mdpi.png" />
+    <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/white_notification_icon/android/white_notification_icon-72-hdpi.png" />
+    <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/white_notification_icon/android/white_notification_icon-96-xhdpi.png" />
     <icon gap:platform="blackberry" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="ios" height="57" src="www/res/icon/ios/icon-57.png" width="57" />

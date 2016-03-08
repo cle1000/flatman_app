@@ -51,7 +51,7 @@
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/icon/android/icon-72-hdpi.png" />
     <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
 
-        <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/white_notification_icon/android/white_notification_icon-36-ldpi.png" />
+    <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/white_notification_icon/android/white_notification_icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/white_notification_icon/android/white_notification_icon-48-mdpi.png" />
     <icon gap:platform="android" gap:qualifier="hdpi" src="www/res/white_notification_icon/android/white_notification_icon-72-hdpi.png" />
     <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/white_notification_icon/android/white_notification_icon-96-xhdpi.png" />
