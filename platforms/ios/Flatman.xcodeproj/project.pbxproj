@@ -15,6 +15,13 @@
 		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
 		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
 		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
+		86B569F8B9E2458DAA660A7A /* PushbotsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 26C4BE92CADC468ABD16CED3 /* PushbotsPlugin.m */; };
+		7A95BFBC95C541FCAFF548A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0EAE289797F4047967F228A /* CoreLocation.framework */; };
+		0F0F63CBA73D4047A8C98C30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84AC022A46E4902978F7F53 /* SystemConfiguration.framework */; };
+		B5CE293E442F41E7982F0A40 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E064293B7BB746C6AA5B4982 /* CoreTelephony.framework */; };
+		02894E2E8A924D7095F969EE /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B859937265394DF083FABF79 /* Pushbots.framework */; };
+		0E964096A95E4178975A1B34 /* CDVInAppBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 675B1DEE437D4CB1AA5E4A44 /* CDVInAppBrowser.m */; };
+		C5E72B2B1A2C4D5A87077BE4 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 234C2B777BD74068B96650CA /* CDVDevice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +61,16 @@
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "Flatman/config.xml"; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		26C4BE92CADC468ABD16CED3 /* PushbotsPlugin.m */ = {isa = PBXFileReference; name = "PushbotsPlugin.m"; path = "pushbots-cordova-plugin/PushbotsPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		938C04F74D4745DBA73692F8 /* PushbotsPlugin.h */ = {isa = PBXFileReference; name = "PushbotsPlugin.h"; path = "pushbots-cordova-plugin/PushbotsPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B0EAE289797F4047967F228A /* CoreLocation.framework */ = {isa = PBXFileReference; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B84AC022A46E4902978F7F53 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E064293B7BB746C6AA5B4982 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		B859937265394DF083FABF79 /* Pushbots.framework */ = {isa = PBXFileReference; name = "Pushbots.framework"; path = "Flatman/Plugins/pushbots-cordova-plugin/Pushbots.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		675B1DEE437D4CB1AA5E4A44 /* CDVInAppBrowser.m */ = {isa = PBXFileReference; name = "CDVInAppBrowser.m"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		386B7E1E902C4BCB8C478814 /* CDVInAppBrowser.h */ = {isa = PBXFileReference; name = "CDVInAppBrowser.h"; path = "cordova-plugin-inappbrowser/CDVInAppBrowser.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		234C2B777BD74068B96650CA /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9D31E7CDBC224E95935413DC /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +79,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
+				7A95BFBC95C541FCAFF548A9 /* CoreLocation.framework in Frameworks */,
+				0F0F63CBA73D4047A8C98C30 /* SystemConfiguration.framework in Frameworks */,
+				B5CE293E442F41E7982F0A40 /* CoreTelephony.framework in Frameworks */,
+				02894E2E8A924D7095F969EE /* Pushbots.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +152,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B0EAE289797F4047967F228A /* CoreLocation.framework */,
+				B84AC022A46E4902978F7F53 /* SystemConfiguration.framework */,
+				E064293B7BB746C6AA5B4982 /* CoreTelephony.framework */,
+				B859937265394DF083FABF79 /* Pushbots.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -156,6 +181,12 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				26C4BE92CADC468ABD16CED3 /* PushbotsPlugin.m */,
+				938C04F74D4745DBA73692F8 /* PushbotsPlugin.h */,
+				675B1DEE437D4CB1AA5E4A44 /* CDVInAppBrowser.m */,
+				386B7E1E902C4BCB8C478814 /* CDVInAppBrowser.h */,
+				234C2B777BD74068B96650CA /* CDVDevice.m */,
+				9D31E7CDBC224E95935413DC /* CDVDevice.h */,
 			);
 			name = Plugins;
 			path = "Flatman/Plugins";
@@ -270,6 +301,9 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				86B569F8B9E2458DAA660A7A /* PushbotsPlugin.m in Sources */,
+				0E964096A95E4178975A1B34 /* CDVInAppBrowser.m in Sources */,
+				C5E72B2B1A2C4D5A87077BE4 /* CDVDevice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +338,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_NAME = "Flatman";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Flatman/Plugins/pushbots-cordova-plugin\"",
+				);
 			};
 			name = Debug;
 		};
@@ -324,6 +362,10 @@
 				INFOPLIST_FILE = "Flatman/Flatman-Info.plist";
 				PRODUCT_NAME = "Flatman";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"Flatman/Plugins/pushbots-cordova-plugin\"",
+				);
 			};
 			name = Release;
 		};
