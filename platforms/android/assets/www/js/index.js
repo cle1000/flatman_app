@@ -38,12 +38,11 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
 
     onDeviceReady: function() {
-        window.plugins.webintent.getUri(function(url) {
-        if(url !== "") {
-            // url is the url the intent was launched with
-            alert('url');
-        }
-        });
+        app.startApp();
+        PushbotsPlugin.resetBadge();
+    },
+
+    startApp:function(){
         app.initPushbots()
         browser = app.getBrowser()
         browser.addEventListener('loadstop', function (){
@@ -54,7 +53,7 @@ var app = {
     initPushbots: function (){
         if (localStorage.getItem('device_token') == null || localStorage.getItem('device_token').length < 10){
             //alert("init pushbots")
-            if (PushbotsPlugin.isAndroid()){
+            if (device.platform == 'Android'){
                 localStorage.setItem('platform', 'android');
             }else{
                 localStorage.setItem('platform', 'ios');
@@ -63,7 +62,6 @@ var app = {
             setTimeout(function(){
                 Pushbots.getRegistrationId(function (token){
                 localStorage.setItem('device_token', token);
-                //alert("reg:" + token);
                 });
             }, 5000);
         }else {
@@ -76,9 +74,9 @@ var app = {
     },
 
     getBrowser: function (){
-        browser = cordova.InAppBrowser.open("http://www.flatman.at/", "_blank", "location=no,zoom=no,toolbar=no");
+        browser = cordova.InAppBrowser.open("http://www.flatman.at/#/newsfeed", "_blank", "location=no,zoom=no,toolbar=no");
         browser.addEventListener('exit', function (){
-            navigator.app.exitApp()
+            navigator.app.exitApp();
         });
         return browser
     },

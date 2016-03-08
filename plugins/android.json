@@ -7,22 +7,21 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "at.flatman.app"
-        },
-        "pushbots-cordova-plugin": {
-            "PACKAGE_NAME": "at.flatman.app"
-        },
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "at.flatman.app"
+        "cordova-plugin-android-support-v4": {
+            "PACKAGE_NAME": "io.cordova.helloCordova"
         },
         "cordova-plugin-device": {
-            "PACKAGE_NAME": "at.flatman.app"
+            "PACKAGE_NAME": "io.cordova.helloCordova"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "io.cordova.helloCordova"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.cordova.helloCordova"
+        },
+        "pushbots-cordova-plugin": {
+            "PACKAGE_NAME": "io.cordova.helloCordova"
         }
     },
-    "dependent_plugins": {
-        "cordova-plugin-android-support-v4": {
-            "PACKAGE_NAME": "at.flatman.app"
-        }
-    }
+    "dependent_plugins": {}
 }
