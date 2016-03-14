@@ -30,6 +30,7 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.addEventListener("resume", this.onDeviceResume, false);
     },
     // deviceready Event Handler
     //
@@ -38,34 +39,46 @@ var app = {
 
     onDeviceReady: function() {
         app.startApp();
-        PushbotsPlugin.resetBadge();
+    },
+
+    onDeviceResume: function(){
+        if (localStorage.getItem('reload') == 'true'){
+            if (browser != null){
+                browser = app.getBrowser()
+            }
+            localStorage.setItem('reload', 'false');
+        }
     },
 
     startApp:function(){
         app.initPushbots()
         browser = app.getBrowser()
-        browser.addEventListener('loadstop', function (){
-            browser.executeScript({ code: "document.cookie='device_token="+app.getDeviceToken()+"'; document.cookie='platform="+localStorage.getItem('platform')+"'"});
-        });
     },
 
     initPushbots: function (){
-        if (localStorage.getItem('device_token') == null || localStorage.getItem('device_token').length < 10){
-            //alert("init pushbots")
-            if (device.platform == 'Android'){
-                localStorage.setItem('platform', 'android');
-            }else{
-                localStorage.setItem('platform', 'ios');
-            }
-            var Pushbots = PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
-            setTimeout(function(){
-                Pushbots.getRegistrationId(function (token){
-                localStorage.setItem('device_token', token);
-                });
-            }, 5000);
-        }else {
-            //alert("device_token: " + localStorage.getItem('device_token'));
+        //if (localStorage.getItem('device_token') == null || localStorage.getItem('device_token').length < 10){
+        if (device.platform == 'Android'){
+            localStorage.setItem('platform', 'android');
+        }else{
+            localStorage.setItem('platform', 'ios');
         }
+        var Pushbots = PushbotsPlugin.initialize("56d840131779593f0c8b4567", {"android":{"sender_id":"165604899689"}});
+
+
+        setTimeout(function(){
+            Pushbots.getRegistrationId(function (token){
+            localStorage.setItem('device_token', token);
+            });
+        }, 5000);
+        //}
+        Pushbots.on("notification:received", function(data){
+            localStorage.setItem('reload', 'true');
+        });
+
+        // Should be called once the notification is clicked
+        Pushbots.on("notification:clicked", function(data){
+            localStorage.setItem('reload', 'true');
+        });
     },
 
     getDeviceToken: function (){
@@ -76,6 +89,9 @@ var app = {
         browser = cordova.InAppBrowser.open("http://www.flatman.at/#/newsfeed", "_blank", "location=no,zoom=no,toolbar=no");
         browser.addEventListener('exit', function (){
             navigator.app.exitApp();
+        });
+        browser.addEventListener('loadstop', function (){
+            browser.executeScript({ code: "document.cookie='device_token="+app.getDeviceToken()+"'; document.cookie='platform="+localStorage.getItem('platform')+"'"});
         });
         return browser
     },
