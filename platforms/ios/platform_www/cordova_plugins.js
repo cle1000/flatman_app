@@ -24,6 +24,14 @@ module.exports = [
         "clobbers": [
             "PushbotsPlugin"
         ]
+    },
+    {
+        "file": "plugins/com.borismus.webintent/www/webintent.js",
+        "id": "com.borismus.webintent.WebIntent",
+        "pluginId": "com.borismus.webintent",
+        "clobbers": [
+            "WebIntent"
+        ]
     }
 ];
 module.exports.metadata = 

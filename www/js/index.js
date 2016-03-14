@@ -18,7 +18,6 @@
  */
 var browser = null
 
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -40,6 +39,8 @@ var app = {
     onDeviceReady: function() {
         app.startApp();
         PushbotsPlugin.resetBadge();
+        
+
     },
 
     startApp:function(){
