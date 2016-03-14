@@ -15,6 +15,10 @@
                         {
                             "xml": "<feature name=\"WebIntent\"><param name=\"android-package\" value=\"com.borismus.webintent.WebIntent\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -26,6 +30,9 @@
             "PACKAGE_NAME": "at.flatman.android"
         },
         "com.borismus.webintent": {
+            "PACKAGE_NAME": "at.flatman.android"
+        },
+        "cordova-plugin-inappbrowser": {
             "PACKAGE_NAME": "at.flatman.android"
         }
     },
@@ -42,10 +49,19 @@
             "clobbers": [
                 "WebIntent"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+            "id": "cordova-plugin-inappbrowser.inappbrowser",
+            "clobbers": [
+                "cordova.InAppBrowser.open",
+                "window.open"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.2.1",
-        "com.borismus.webintent": "1.0.0"
+        "com.borismus.webintent": "1.0.0",
+        "cordova-plugin-inappbrowser": "1.2.1"
     }
 }

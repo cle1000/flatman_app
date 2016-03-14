@@ -18,12 +18,6 @@
  */
 var browser = null
 
-window.plugins.webintent.getUri(function(url) {
-    if(url !== "") {
-        localStorage.setItem('intent', url);
-    }
-});
-
 var app = {
     // Application Constructor
     initialize: function() {
@@ -43,7 +37,6 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
 
     onDeviceReady: function() {
-        alert(localStorage.getItem('intent'));
         app.startApp();
         PushbotsPlugin.resetBadge();
     },

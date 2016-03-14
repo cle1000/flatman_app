@@ -37,16 +37,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
 
     onDeviceReady: function() {
-        alert(localStorage.getItem('intent'));
-        window.plugins.webintent.getUri(function(url) {
-            if(url !== "") {
-                localStorage.setItem('intent', url);
-            }
-        });
         app.startApp();
         PushbotsPlugin.resetBadge();
-        
-
     },
 
     startApp:function(){

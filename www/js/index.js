@@ -39,8 +39,6 @@ var app = {
     onDeviceReady: function() {
         app.startApp();
         PushbotsPlugin.resetBadge();
-        
-
     },
 
     startApp:function(){
