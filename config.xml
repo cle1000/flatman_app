@@ -45,7 +45,6 @@
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="pushbots-cordova-plugin" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
-    <gap:plugin name="WebIntent" value="com.borismus.webintent.WebIntent"/>
 
     <gap:icon gap:platform="android" gap:qualifier="ldpi" src="www/res/white_notification_icon/android/white_notification_icon-36-ldpi.png" />
     <gap:icon gap:platform="android" gap:qualifier="mdpi" src="www/res/white_notification_icon/android/white_notification_icon-48-mdpi.png" />
