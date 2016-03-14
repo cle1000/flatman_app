@@ -19,6 +19,13 @@ module.exports = [
             "cordova.InAppBrowser.open",
             "window.open"
         ]
+    },
+    {
+        "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
+        "id": "pushbots-cordova-plugin.PushbotsPlugin",
+        "clobbers": [
+            "PushbotsPlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -26,7 +33,9 @@ module.exports.metadata =
 {
     "cordova-plugin-whitelist": "1.2.1",
     "com.borismus.webintent": "1.0.0",
-    "cordova-plugin-inappbrowser": "1.2.1"
+    "cordova-plugin-inappbrowser": "1.2.1",
+    "cordova-plugin-android-support-v4": "21.0.1",
+    "pushbots-cordova-plugin": "1.3.5"
 };
 // BOTTOM OF METADATA
 });

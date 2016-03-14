@@ -61,6 +61,8 @@
     <preference gap:platform="android" name="AppendUserAgent" value="flatman_app:android" />
     <preference gap:platform="ios" name="AppendUserAgent" value="flatman_app:ios" />
 
+    <preference name="AppendUserAgent" value="test:test" />
+
 
     <icon gap:platform="blackberry" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="www/res/icon/blackberry/icon-80.png" />

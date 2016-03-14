@@ -20,6 +20,70 @@
                             "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
                             "count": 1
                         }
+                    ],
+                    "/widget": [
+                        {
+                            "xml": "<feature name=\"PushbotsPlugin\"><param name=\"android-package\" value=\"com.pushbots.plugin.PushbotsPlugin\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/manifest": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<permission android:name=\"at.flatman.android.permission.C2D_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"at.flatman.android.permission.C2D_MESSAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.google.android.c2dm.permission.RECEIVE\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/manifest/application": [
+                        {
+                            "xml": "<receiver android:name=\"com.pushbots.google.gcm.GCMBroadcastReceiver\" android:permission=\"com.google.android.c2dm.permission.SEND\"><intent-filter><action android:name=\"com.google.android.c2dm.intent.RECEIVE\" /><action android:name=\"com.google.android.c2dm.intent.REGISTRATION\" /><category android:name=\"at.flatman.android\" /></intent-filter></receiver>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.pushbots.plugin.PushHandler\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.pushbots.push.DefaultPushHandler\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:name=\"com.pushbots.push.GCMIntentService\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/*/application/activity": [
+                        {
+                            "xml": "<intent-filter><action android:name=\"at.flatman.android.MESSAGE\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter>",
+                            "count": 1
+                        }
                     ]
                 }
             }
@@ -33,6 +97,12 @@
             "PACKAGE_NAME": "at.flatman.android"
         },
         "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "at.flatman.android"
+        },
+        "cordova-plugin-android-support-v4": {
+            "PACKAGE_NAME": "at.flatman.android"
+        },
+        "pushbots-cordova-plugin": {
             "PACKAGE_NAME": "at.flatman.android"
         }
     },
@@ -57,11 +127,20 @@
                 "cordova.InAppBrowser.open",
                 "window.open"
             ]
+        },
+        {
+            "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
+            "id": "pushbots-cordova-plugin.PushbotsPlugin",
+            "clobbers": [
+                "PushbotsPlugin"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-whitelist": "1.2.1",
         "com.borismus.webintent": "1.0.0",
-        "cordova-plugin-inappbrowser": "1.2.1"
+        "cordova-plugin-inappbrowser": "1.2.1",
+        "cordova-plugin-android-support-v4": "21.0.1",
+        "pushbots-cordova-plugin": "1.3.5"
     }
 }
