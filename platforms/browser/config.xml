@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android_packageName="at.flatman.android" id="at.flatman.android" ios_CFBundleIdentifier="at.flatman.app" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget android_packageName="at.flatman.android" id="at.flatman.android" ios_CFBundleIdentifier="at.flatman.app" version="1.0.10" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Flatman</name>
     <description>
         A tool to organize the finances of a shared flat!
@@ -8,10 +8,10 @@
         Flatman Team
     </author>
     <gap:config-file parent="CFBundleVersion" platform="ios">
-        <string>1.0.9</string>
+        <string>1.0.10</string>
     </gap:config-file>
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
-        <string>1.0.9</string>
+        <string>1.0.10</string>
     </gap:config-file>
     <content src="index.html" />
     <preference name="permissions" value="none" />
@@ -48,6 +48,9 @@
     <icon gap:platform="android" gap:qualifier="xhdpi" src="www/res/icon/android/icon-96-xhdpi.png" />
     <preference gap:platform="android" name="AppendUserAgent" value="flatman_app:android" />
     <preference gap:platform="ios" name="AppendUserAgent" value="flatman_app:ios" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#efb900" />
+    <preference name="StatusBarStyle" value="blackopaque" />
     <icon gap:platform="blackberry" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="blackberry" gap:state="hover" src="www/res/icon/blackberry/icon-80.png" />
     <icon gap:platform="ios" height="57" src="www/res/icon/ios/icon-57.png" width="57" />
