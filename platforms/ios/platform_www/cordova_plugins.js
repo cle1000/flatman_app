@@ -1,11 +1,11 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "file": "plugins/cordova-plugin-device/www/device.js",
-        "id": "cordova-plugin-device.device",
-        "pluginId": "cordova-plugin-device",
+        "file": "plugins/com.borismus.webintent/www/webintent.js",
+        "id": "com.borismus.webintent.WebIntent",
+        "pluginId": "com.borismus.webintent",
         "clobbers": [
-            "device"
+            "WebIntent"
         ]
     },
     {
@@ -18,27 +18,19 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
-        "id": "pushbots-cordova-plugin.PushbotsPlugin",
-        "pluginId": "pushbots-cordova-plugin",
-        "clobbers": [
-            "PushbotsPlugin"
-        ]
-    },
-    {
-        "file": "plugins/com.borismus.webintent/www/webintent.js",
-        "id": "com.borismus.webintent.WebIntent",
-        "pluginId": "com.borismus.webintent",
-        "clobbers": [
-            "WebIntent"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
         "id": "cordova-plugin-statusbar.statusbar",
         "pluginId": "cordova-plugin-statusbar",
         "clobbers": [
             "window.StatusBar"
+        ]
+    },
+    {
+        "file": "plugins/pushbots-cordova-plugin/www/pushbots.js",
+        "id": "pushbots-cordova-plugin.PushbotsPlugin",
+        "pluginId": "pushbots-cordova-plugin",
+        "clobbers": [
+            "PushbotsPlugin"
         ]
     }
 ];

@@ -42,6 +42,7 @@ var app = {
     },
 
     onDeviceResume: function(){
+        Pushbots.resetBadge();
         if (localStorage.getItem('reload') == 'true'){
             if (browser != null){
                 browser = app.getBrowser()
