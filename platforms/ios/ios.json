@@ -19,6 +19,18 @@
                         {
                             "xml": "<feature name=\"PushbotsPlugin\"><param name=\"ios-package\" value=\"PushbotsPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -43,6 +55,9 @@
         },
         "com.borismus.webintent": {
             "PACKAGE_NAME": "io.cordova.helloCordova"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "at.flatman.android"
         }
     },
     "dependent_plugins": {},
@@ -78,6 +93,14 @@
             "pluginId": "com.borismus.webintent",
             "clobbers": [
                 "WebIntent"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
             ]
         }
     ]

@@ -71,10 +71,7 @@ var app = {
             });
         }, 5000);
         //}
-        Pushbots.on("notification:received", function(data){
-            localStorage.setItem('reload', 'true');
-        });
-
+       
         // Should be called once the notification is clicked
         Pushbots.on("notification:clicked", function(data){
             localStorage.setItem('reload', 'true');

@@ -22,6 +22,7 @@
 		80A51343459C4413ABC0B42A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C3794444A7466598FE28B6 /* SystemConfiguration.framework */; };
 		BA2F09B14AA2427FB2C51FEA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A24FCB3BCC824F73A9268937 /* CoreTelephony.framework */; };
 		77FEB9BDA75B46BAB7831142 /* Pushbots.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8136FC20EE8495AA8394D85 /* Pushbots.framework */; };
+		BE549A6AE10B498EBAAD0329 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5440225AE844A8B401696F /* CDVStatusBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		F5C3794444A7466598FE28B6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		A24FCB3BCC824F73A9268937 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		F8136FC20EE8495AA8394D85 /* Pushbots.framework */ = {isa = PBXFileReference; name = "Pushbots.framework"; path = "Flatman/Plugins/pushbots-cordova-plugin/Pushbots.framework"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9D5440225AE844A8B401696F /* CDVStatusBar.m */ = {isa = PBXFileReference; name = "CDVStatusBar.m"; path = "cordova-plugin-statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		B73AEE395EDB4FCF8B9979FE /* CDVStatusBar.h */ = {isa = PBXFileReference; name = "CDVStatusBar.h"; path = "cordova-plugin-statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +190,8 @@
 				385687B9C76F483D9C431BCC /* CDVInAppBrowser.h */,
 				EF185B70AB744741B6E0D1BB /* PushbotsPlugin.m */,
 				68BA063D8DAD4B1D874F3A65 /* PushbotsPlugin.h */,
+				9D5440225AE844A8B401696F /* CDVStatusBar.m */,
+				B73AEE395EDB4FCF8B9979FE /* CDVStatusBar.h */,
 			);
 			name = Plugins;
 			path = "Flatman/Plugins";
@@ -304,6 +309,7 @@
 				018E6AA1636A4BA5A503BCAD /* CDVDevice.m in Sources */,
 				EF4F44307E3441CFBBFDAD53 /* CDVInAppBrowser.m in Sources */,
 				DC378B2C064146E883266CBD /* PushbotsPlugin.m in Sources */,
+				BE549A6AE10B498EBAAD0329 /* CDVStatusBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
