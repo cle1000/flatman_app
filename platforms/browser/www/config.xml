@@ -37,6 +37,7 @@
     <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
     <gap:plugin name="pushbots-cordova-plugin" source="npm" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
     <gap:icon gap:platform="android" gap:qualifier="ldpi" src="www/res/white_notification_icon/android/white_notification_icon-36-ldpi.png" />
     <gap:icon gap:platform="android" gap:qualifier="mdpi" src="www/res/white_notification_icon/android/white_notification_icon-48-mdpi.png" />
     <gap:icon gap:platform="android" gap:qualifier="hdpi" src="www/res/white_notification_icon/android/white_notification_icon-72-hdpi.png" />
