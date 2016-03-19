@@ -1,0 +1,3 @@
+phonegap prepare
+phonegap run android --device
+

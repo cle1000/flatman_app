@@ -38,14 +38,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
 
     onDeviceReady: function() {
-        if (cordova.platformId == 'android') {
-            StatusBar.backgroundColorByHexString("#efb900");
-        }
         app.startApp();
     },
 
     onDeviceResume: function(){
-        Pushbots.resetBadge();
+        if (cordova.platformId != 'android'){
+            Pushbots.resetBadge();
+        }
+
         if (localStorage.getItem('reload') == 'true'){
             if (browser != null){
                 browser = app.getBrowser()
