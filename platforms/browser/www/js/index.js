@@ -32,11 +32,7 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.addEventListener("resume", this.onDeviceResume, false);
     },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-
+   
     onDeviceReady: function() {
         app.startApp();
     },
@@ -86,25 +82,26 @@ var app = {
         return localStorage.getItem('device_token');
     },
 
-    getBrowser: function (){
-        browser = cordova.InAppBrowser.open("http://www.flatman.at/#/newsfeed", "_blank", "location=no,zoom=no,toolbar=no");
+    addEvents: function (browser){
         browser.addEventListener('exit', function (){
             navigator.app.exitApp();
         });
         browser.addEventListener('loadstop', function (){
             browser.executeScript({ code: "document.cookie='device_token="+app.getDeviceToken()+"'; document.cookie='platform="+localStorage.getItem('platform')+"'"});
         });
-        return browser
+        return browser;
     },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+    getBrowser: function (url){
+        if (url != undefined){
+            browser = cordova.InAppBrowser.open("error.html", "_blank", "location=no,zoom=no,toolbar=no");
+        }else{
+            browser = cordova.InAppBrowser.open("http://www.flatman.at/#/newsfeed", "_blank", "location=no,zoom=no,toolbar=no");
+        }
+        browser = app.addEvents(browser);
+        browser.addEventListener('loaderror', function (){
+            app.getBrowser("error");
+        });
+        return browser;
     }
 };
