@@ -35,6 +35,9 @@ var app = {
    
     onDeviceReady: function() {
         app.startApp();
+        //document.addEventListener("backbutton", function(e){
+       //        navigator.app.exitApp();
+        //}, false);
     },
 
     onDeviceResume: function(){
